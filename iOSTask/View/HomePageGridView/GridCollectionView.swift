@@ -81,12 +81,12 @@ extension GridCollectionView:UICollectionViewDelegate , UICollectionViewDataSour
         
         
         if UIDevice.current.userInterfaceIdiom == .phone {
-            width = (self.frame.width - ((1 * interItemSpacing) + (leadingSpacing + trailingSpacing ))) / 2
+            width = (self.frame.width - ((1 * interItemSpacing) + (leadingSpacing + trailingSpacing ))) / 2  //For iphone , it will show 2 column
             
             height = (self.frame.height - ((2 * lineSpacing) + (topSpacing + bottomSpacing))) / 3
         }
         else if  UIDevice.current.userInterfaceIdiom == .pad {
-            width = (self.frame.width - ((3 * interItemSpacing) + (leadingSpacing + trailingSpacing ))) / 4
+            width = (self.frame.width - ((3 * interItemSpacing) + (leadingSpacing + trailingSpacing ))) / 4  // For ipad , it will show 4 column
              
             height = (self.frame.height - ((4 * lineSpacing) + (topSpacing + bottomSpacing))) / 5
         }
